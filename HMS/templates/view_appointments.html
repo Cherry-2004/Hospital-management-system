@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3 class="mb-3">Appointment List</h3>
+
+<table class="table table-bordered table-striped table-hover">
+  <thead class="table-dark">
+    <tr>
+      <th>ID</th>
+      <th>Patient Name</th>
+      <th>Doctor Name</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {% for a in appointments %}
+    <tr>
+      <td>{{ a["id"] }}</td>
+      <td>{{ a["patient_name"] }}</td>
+      <td>{{ a["doctor_name"] }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+<a href="/dashboard" class="btn btn-secondary">Back to Dashboard</a>
+
+{% endblock %}

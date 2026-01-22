@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3>Book Appointment</h3>
+
+<form method="post">
+  <input class="form-control mb-2" name="patient_id" placeholder="Patient ID" required>
+  <input class="form-control mb-2" name="doctor_id" placeholder="Doctor ID" required>
+  <button class="btn btn-warning">Book</button>
+</form>
+
+{% endblock %}
